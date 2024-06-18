@@ -66,9 +66,10 @@ class WarTest {
         war.addSaxon(saxon);
         war.addViking(viking);
         int oldHealth = saxon.getHealth();
-        int actualHealth = oldHealth - viking.getStrength();
         war.vikingAttack();
-        assertEquals(saxon.getHealth()- viking.getStrength(), actualHealth);
+        int actualHealth = oldHealth - viking.getStrength();
+
+        assertEquals(saxon.getHealth(), actualHealth);
     }
 
     @Test
